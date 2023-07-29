@@ -6,11 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class BinarySerachimpl {
 
+    @Autowired
     private SortAlgorithm sortAlgorithm;
-
-    public BinarySerachimpl(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
-    }
 
     public int binarySearch(int[] numbers, int numberToSearch) {
         int [] sortedNumbers = sortAlgorithm.sort(numbers);
